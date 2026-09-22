@@ -1,10 +1,10 @@
 //TODO: Include your multi-line comment header
 /*
-    Name: 
-    Date: 
-    Assignment: 
-    Quarter: 
-    Instructor: 
+    Name: Alexandra
+    Date: 09-21-2026
+    Assignment: Module 01 Applied Programming Activity
+    Quarter: Fall
+    Instructor: Tania Kuisma
 */
 
 // TODO: Import "use strict" directive
@@ -38,6 +38,42 @@ isEnrolled;
 // DISPLAY RESULTS
 
 // TODO: Display your results. Use the correct variables and avoid hard-coding the data below.
+
+let Myname = "Alexandra";
+let totalModules = 10;
+let isEnrolled = true;
+
+let welcomeMessage = `Welcome, ${Myname}!`;
+
+let hoursPerWeek = 6;
+let totalStudyHours = totalModules * hoursPerWeek
+console.log(totalStudyHours);
+
+let dailyStudyHours = (hoursPerWeek / 7);
+console.log(dailyStudyHours);
+
+let dailyStudyMinutes = dailyStudyHours * 60;
+console.log(dailyStudyMinutes);
+
+let adjustedDailyStudyHours = (hoursPerWeek / 6);
+console.log(adjustedDailyStudyHours);
+
+let adjustedDailyStudyMinutes = adjustedDailyStudyHours * 60;
+console.log(adjustedDailyStudyMinutes)
+
+let part = 2;
+let whole = 10;
+
+let percent = (part / whole) * 100;
+let percentRemaining = 100 - percent;
+
+console.log(percent);
+console.log(percentRemaining);
+
+
+
+
+
 // TODO: Adjust all decimals to two places.
 display("Welcome Message");
 display("My Name");
@@ -51,3 +87,14 @@ display("Daily Study Minutes (with rest day)");
 // TODO: Display your results with a % sign
 display("Percent Complete");
 display("Percent Remaining");
+
+console.log(welcomeMessage);
+console.log(Myname);
+console.log(isEnrolled);
+console.log(totalModules);
+console.log(dailyStudyHours.toFixed(2));
+console.log(dailyStudyMinutes.toFixed(2));
+console.log(adjustedDailyStudyHours.toFixed(2));
+console.log(adjustedDailyStudyMinutes.toFixed(2));
+console.log(percent + "%");
+console.log(percentRemaining + "%");
