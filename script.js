@@ -55,22 +55,16 @@ console.log(adjustedDailyStudyMinutes)
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
 // Formula: percent = (part / whole) * 100
 
-let part = 2;
-let whole = 10;
 
-let percentCompleted = (part / whole) * 100;
-let percentRemaining = 100 - percent;
-
-console.log(percent);
-console.log(percentRemaining);
+const completedModules = prompt("Enter completed modules (1-10): ");
+const percentComplete = (completedModules / totalModules) * 100;
+const percentRemaining = 100 - percentComplete;
 
 const courseModules = ["Module 1","Module 2","Module 3","Module 4","Module 5","Module 6","Module 7","Module 8","Module 9",
   "Module 10"];
 
-let completedModules = ["Module 1","Module 2"];
+//let completedModules = ["Module 1","Module 2"];
 
-completedModules = prompt("Enter the number of completed modules (1-10): ");
-percentRemaining = 100 - (completedModules / 10) * 100;
 
 let courseProgress;
 
