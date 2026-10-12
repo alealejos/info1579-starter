@@ -119,7 +119,7 @@ display("Course Grade: ", courseGrade);
 let studyDay;
 let studyPlan;
 
-if (percentCompleted===100){
+if (percentComplete===100){
   studyDay='Complete';
 }
 else {
@@ -153,11 +153,6 @@ display("Study Plan: ", studyPlan);
 // DISPLAY RESULTS
 
 // TODO: Display your results. Use the correct variables and avoid hard-coding the data below.
-
-
-
-
-
 
 
 // TODO: Adjust all decimals to two places.
