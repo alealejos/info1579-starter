@@ -56,15 +56,18 @@ console.log(adjustedDailyStudyMinutes)
 // Formula: percent = (part / whole) * 100
 
 
-const completedModules = prompt("Enter completed modules (1-10): ");
-const percentComplete = (completedModules / totalModules) * 100;
+const percentComplete = calculatePercentComplete(completedModules.length, courseModules.length)
 const percentRemaining = 100 - percentComplete;
 
 const courseModules = ["Module 1","Module 2","Module 3","Module 4","Module 5","Module 6","Module 7","Module 8","Module 9",
   "Module 10"];
 
-//let completedModules = ["Module 1","Module 2"];
+//Part1
+let completedModules = ["Module 1","Module 2", "Module 3"];
 
+functioncalculatePercentComplete(completedModules,total){
+  return (completed/total)*100;
+}
 
 let courseProgress;
 
