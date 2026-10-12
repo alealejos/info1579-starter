@@ -58,7 +58,7 @@ console.log(adjustedDailyStudyMinutes)
 let part = 2;
 let whole = 10;
 
-let percent = (part / whole) * 100;
+let percentCompleted = (part / whole) * 100;
 let percentRemaining = 100 - percent;
 
 console.log(percent);
@@ -67,7 +67,7 @@ console.log(percentRemaining);
 const courseModules = ["Module 1","Module 2","Module 3","Module 4","Module 5","Module 6","Module 7","Module 8","Module 9",
   "Module 10"];
 
-const completedModules = ["Module 1","Module 2"];
+let completedModules = ["Module 1","Module 2"];
 
 completedModules = prompt("Enter the number of completed modules (1-10): ");
 percentRemaining = 100 - (completedModules / 10) * 100;
@@ -92,57 +92,60 @@ else if (percentRemaining >= 75 && percentRemaining <= 100) {
 
 else {courseProgress = "Invalid entry.";}
 
-display(courseProgress);
+display("courseProgress", courseProgress);
 
-if (percentCompleted >= 90 && percentCompleted <= 100) {
+
+let courseGrade;
+
+if (percentRemaining >= 90 && percentRemaining <= 100) {
     courseGrade = "A";
 } 
 
-else if (percentCompleted >= 80 && percentCompleted <=89.99) {
+else if (percentRemaining >= 80 && percentRemaining <=89.99) {
     courseGrade = "B";
 } 
 
-else if (percentCompleted >= 70 && percentCompleted <=79.99) {
+else if (percentRemaining >= 70 && percentRemaining <=79.99) {
     courseGrade = "C";
 } 
 
-else if (percentCompleted >= 60 && percentCompleted <=69.99) {
+else if (percentRemaining >= 60 && percentRemaining <=69.99) {
     courseGrade = "D";
 } 
 
-else if (percentCompleted >= 0 && percentCompleted <=59.99) {
+else if (percentRemaining >= 0 && percentRemaining <=59.99) {
     courseGrade = "F";
 } 
 
 else {courseGrade = "Invalid entry.";
 }
 
-display("Course Grade: " & courseGrade);
+display("Course Grade: ", courseGrade);
 
 let studyDay;
 let studyPlan;
 
-if (courseProgress===100){
+if (percentCompleted===100){
   studyDay='Complete';
 }
 else {
-  promp('Enter a study day: ');
+  studyDay = prompt('Enter a study day: ');
 }
   
 switch (studyDay){
-  case "Monday": console.log ('Study for 55 minutes');
+  case "Monday": studyPlan = 'Study for 55 minutes';
   break;
-  case "Tuesday": console.log ('Take the day off');
+  case "Tuesday": studyPlan ='Take the day off';
   break;
-  case 'Wednesday': console.log ('Lab day for 30 minutes');
+  case 'Wednesday': studyPlan = 'Lab day for 30 minutes';
   break;
-  case 'Thursday': console.log('Applied programming activity day for 40 minutes');
+  case 'Thursday': studyPlan ='Applied programming activity day for 40 minutes';
   break;
-  case 'Friday': console.log ('Study for 20 minutes');
+  case 'Friday': studyPlan = 'Study for 20 minutes';
   break;
-  case 'Saturday': console.log ('Study for 40 minutes');
+  case 'Saturday': studyPlan = 'Study for 40 minutes';
   break;
-  case 'Sunday':console.log ('Quiz')
+  case 'Sunday': studyPlan ='Quiz';
   break;
   case "Complete":
   studyPlan = "Course Completed!";
@@ -150,8 +153,8 @@ switch (studyDay){
   default:studyPlan = "Invalid day";
   break;
 }
-display("Study Day: " + studyDay);
-display("Study Plan: " + studyPlan);
+display("Study Day: ", studyDay);
+display("Study Plan: ", studyPlan);
 
 // DISPLAY RESULTS
 
@@ -174,16 +177,7 @@ display("Daily Study Hours (with rest day)", adjustedDailyStudyHours.toFixed(2))
 display("Daily Study Minutes (with rest day)", adjustedDailyStudyMinutes.toFixed(2));
 
 // TODO: Display your results with a % sign
-display("Percent Complete", percent + "%");
+display("Percent Complete", percentCompleted + "%");
 display("Percent Remaining", percentRemaining + "%");
 
 
-console.log(Myname);
-console.log(isEnrolled);
-console.log(totalModules);
-console.log(dailyStudyHours.toFixed(2));
-console.log(dailyStudyMinutes.toFixed(2));
-console.log(adjustedDailyStudyHours.toFixed(2));
-console.log(adjustedDailyStudyMinutes.toFixed(2));
-console.log(percent + "%");
-console.log(percentRemaining + "%");
