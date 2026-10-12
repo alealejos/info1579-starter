@@ -63,7 +63,7 @@ const courseModules = ["Module 1","Module 2","Module 3","Module 4","Module 5","M
   "Module 10"];
 
 //Part1
-let completedModules = ["Module 1","Module 2", "Module 3"];
+const completedModules = ["Module 1","Module 2", "Module 3"];
 
 functioncalculatePercentComplete(completedModules,total){
   return (completed/total)*100;
